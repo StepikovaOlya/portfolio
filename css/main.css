@@ -100,7 +100,7 @@ h1 span {
     left: 0;
     right: 0;
     bottom: 0;
-    animation: bg-position 120s linear infinite, bg-color 6s linear infinite;
+    animation: bg-position 30s linear infinite, bg-color 6s linear infinite;
 }
 
 .background {
@@ -128,7 +128,7 @@ h1 span {
 
 @keyframes bg-position {
     100% {
-        background-position: 0px -2500px;
+        background-position: 0px -500px;
     }
 
     /*
