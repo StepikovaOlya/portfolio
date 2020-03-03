@@ -11,18 +11,18 @@
     <!-- Favicon -->
     <link rel="icon" href="#" type="image/x-icon">
     <link rel="shortcut icon" href="#" type="image/x-icon">
-    <!-- OG-метки -->
+    <!-- OG-Tags -->
     <meta property="og:title" content="Stepikova Olga - Frontend Developer">
     <meta property="og:description" content="Frontend Developer">
     <meta property="og:type" content="website">
     <meta property="og:image" content="#">
     <meta property="og:site_name" content="stepikovaolya.github.io/portfolio">
-    <!-- Файлы стилей -->
+    <!-- CSS Styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <!-- header-->
+    <!-- Header-->
     <header class="header" id="header">
         <div class="bg background">
             <div class="container">
@@ -30,11 +30,19 @@
                     <div class="logo">
                         Myportfolio
                     </div>
-                    <ul class="menu">
+                    <ul class="menu" id="menu">
                         <li class="menu__item">
-                            <a href="#" title="About">
+                            <a href="#about" title="About">
                                 About
                             </a>
+                            <ul class="menu__add">
+                                <a href="#wrapper__text">
+                                    <li>My way</li>
+                                </a>
+                                <a href="#wrapper__list">
+                                    <li>Some facts</li>
+                                </a>
+                            </ul>
                         </li>
                         <li class="menu__item">
                             <a href="#" title="Skills">
@@ -53,8 +61,45 @@
                 <a href="#" class="arrow">↓</a>
             </div>
         </div>
-
     </header>
+    <!-- Section About -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="about-title">
+                About
+            </h2>
+            <div class="wrapper flex-container">
+                <div class="wrapper__info">
+                    <h3 class="wrapper__title">
+                        My way
+                    </h3>
+                    <p class="wrapper__text" id="wrapper__text">
+                        I decided to start an IT career 2 years ago. Since that time, I have studied independently and passed all possible tests. Each bad experience has motivated me to study harder. Now, my CV doesn’t include 5 years of experience and knowledge of 10,500 programming languages, but I’m sure that I will be able to progress quickly with the help of real experience while working in the company because I learn easily and I'm very persistent.
+                    </p>
+                    <ul class="wrapper__list" id="wrapper__list">
+                        <h3 class="wrapper__title">
+                            Here are some interesting facts about me:
+                        </h3>
+                        <li class="wrapper__item">
+                            - I can do everything and even more if I know that this will benefit the company and that my work will be appreciated.
+                        </li>
+                        <li class="wrapper__item">
+                            - I like to plan my day. I don't waste time on breaks. I can drink coffee in the workplace and I eat little food because I keep fit)).
+                        </li>
+                        <li class="wrapper__item">
+                            - I rarely show my emotions, so I can keep calm, even when my computer is overloaded with processes.
+                        </li>
+                        <li class="wrapper__item">
+                            - I never argue with my boss. If I have questions or difficulties at work, I prefer to write an email to my mentor.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
