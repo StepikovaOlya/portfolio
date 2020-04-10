@@ -62,35 +62,9 @@ nav {
     margin: 5px 0;
 }
 
-/*
-.ui-menu {
-    width: 400px;
-}
-
-.ui-menu a {
-    display: block;
-    text-decoration: none;
-}
-*/
-
 .mail {
     color: #fff;
     text-decoration: none;
-}
-
-.arrow {
-    position: absolute;
-    left: 50%;
-    margin-left: -19px;
-    bottom: 8%;
-    color: #fff;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    width: 38px;
-    height: 38px;
-    line-height: 38px;
-    text-align: center;
-    display: block;
 }
 
 h1 {
@@ -107,19 +81,6 @@ h1 span {
     display: block;
     font-size: 30px;
 
-}
-
-.bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    animation: bg-position 30s linear infinite, bg-color 6s linear infinite;
-}
-
-.background {
-    background: url(../img/bg.png) center top / cover;
 }
 
 /*Animation for header*/
@@ -148,31 +109,169 @@ h1 span {
     }
 }
 
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: bg-position 30s linear infinite, bg-color 6s linear infinite;
+}
+
+.background {
+    background: url(../img/bg.png) center top / cover;
+}
+
+
 /*    Section About*/
 
 .about {
     padding: 75px 0;
 }
 
-.flex-container {
-    display: flex;
-}
 
 .wrapper {
+    display: flex;
     justify-content: space-between;
 }
 
-.wrapper__info {
-    width: 460px;
+
+.about__info {
+    width: 470px;
 }
 
-.wrapper__text {
+.about__text {
     text-align: justify;
     line-height: 1.5em;
 }
 
-.wrapper__item {
+.about__item {
     text-align: justify;
     line-height: 1.5em;
+
+}
+
+/*Contact*/
+
+.contact {
+    width: 470px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+/*socialIcons*/
+
+.socialIcons {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 70px;
+}
+
+.socialIcons li {
+    display: inline-block;
+}
+
+.socialIcons li a {
+    display: inline-block;
+    font-size: 4rem;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    color: pink;
+    transition: all ease 0.5s;
+    text-shadow: 0px 0px 1px black, 0px 0px 1px black;
+    transform: rotateX(-30deg);
+}
+
+.socialIcons li a:hover {
+    transform: rotateX(-30deg) translateY(-20px);
+}
+
+.socialIcons li a:hover.linkedin {
+    color: #365899;
+    text-shadow: 0px 0px 0px #365899, 0px 1px 2px #2f4d86, 0px 2px 2px #294273, 0px 3px 2px #223760, 0px 4px 2px #1b2d4e, 0px 5px 2px #15223b, 0px 6px 2px #0e1728, 0px 7px 2px #070c15, 0px 8px 2px #010102, 0px 9px 2px black, 0px 10px 2px black;
+}
+
+.socialIcons li a:hover.github {
+    color: #1DA1F2;
+    text-shadow: 0px 0px 0px #1DA1F2, 0px 1px 2px #0d95e8, 0px 2px 2px #0c85d0, 0px 3px 2px #0b76b8, 0px 4px 2px #0967a0, 0px 5px 2px #085788, 0px 6px 2px #064870, 0px 7px 2px #053857, 0px 8px 2px #04293f, 0px 9px 2px #021927, 0px 10px 2px #010a0f;
+}
+
+.socialIcons li a:hover.instagram {
+    color: #C32AA3;
+    text-shadow: 0px 0px 0px #C32AA3, 0px 1px 2px #ae2591, 0px 2px 2px #992180, 0px 3px 2px #841c6e, 0px 4px 2px #6f185d, 0px 5px 2px #5a134b, 0px 6px 2px #450f3a, 0px 7px 2px #300a28, 0px 8px 2px #1b0617, 0px 9px 2px #060105, 0px 10px 2px black;
+}
+
+.socialIcons li a:hover.mail {
+    color: #ff0000;
+    text-shadow: 0px 0px 0px #C32AA3, 0px 1px 2px #ae2591, 0px 2px 2px #992180, 0px 3px 2px #841c6e, 0px 4px 2px #6f185d, 0px 5px 2px #5a134b, 0px 6px 2px #450f3a, 0px 7px 2px #300a28, 0px 8px 2px #1b0617, 0px 9px 2px #060105, 0px 10px 2px black;
+}
+
+/*Responsive*/
+
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .about__info,
+    .contact {
+        width: 100%;
+    }
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+
+    .logo,
+    .mail {
+        display: none;
+    }
+
+    .bg {
+        animation: bg-color 6s linear infinite;
+    }
+
+    .menu {
+        margin: 0 auto;
+    }
+}
+
+/*320px - 576px*/
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h1 span {
+        font-size: 10px;
+    }
 
 }
